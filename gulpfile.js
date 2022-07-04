@@ -1,8 +1,12 @@
 const gulp = require('gulp')
 const htmlmin = require('gulp-htmlmin')
 
-gulp.task('min-html', (cb) => {
-  gulp.src('src/*.html')
+gulp.task('copy', () => { 
+  return gulp.src('src/**/*') .pipe(gulp.dest('dist'))
+});
+
+gulp.task('min-html', () => {
+  return gulp.src('src/**/*.html')
   .pipe(htmlmin({ 
     collapseWhitespace: true,
     removeComments: true,
@@ -10,5 +14,6 @@ gulp.task('min-html', (cb) => {
     minifyCSS: true
    }))
   .pipe(gulp.dest('dist'))
-  cb()
 })
+
+gulp.task('default', gulp.series('copy', 'min-html'))

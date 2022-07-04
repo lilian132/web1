@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>落地页</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://weui.io/style/weui.css">
   <script type="text/javascript">
     (function (win, doc) {
@@ -28,7 +27,7 @@
   </style>
 </head>
 <body>
-  <div class="page__bd page__bd_spacing">
+  <div>
     <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showIOSDialog1">iOS Dialog样式一</a>
     <a href="javascript:" role="button" class="weui-btn weui-btn_default" id="showIOSDialog2">iOS Dialog样式二</a>
 </div>
@@ -56,45 +55,48 @@
           </div>
       </div>
   </div>
-  <!--END dialog2-->
+  <!--END dialog2--> 
+  <div role="alert" id="js_toast" style="display: none;">
+      <div class="weui-mask_transparent"></div>
+      <div class="weui-toast">
+          <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+          <p class="weui-toast__content">已完成</p>
+      </div>
+  </div>
+
+  <!-- text toast -->
+  <div role="alert" id="textToast" style="display: none;">
+    <div class="weui-mask_transparent"></div>
+    <div class="weui-toast weui-toast_text">
+        <p class="weui-toast__content">文字提示</p>
+    </div>
+</div>
   <script src="../js/zepto.min.js"></script>
   <script type="text/javascript">
     $(function(){
         var $iosDialog1 = $('#iosDialog1'),
-            $iosDialog2 = $('#iosDialog2'),
-            $androidDialog1 = $('#androidDialog1'),
-            $androidDialog2 = $('#androidDialog2');
+            $iosDialog2 = $('#iosDialog2')
+            var $toast = $('#js_toast');
+            var $textToast = $('#textToast');
 
         $('#dialogs').on('click', '.weui-dialog__btn', function(){
-            $(this).parents('.js_dialog').fadeOut(200);
-            $(this).parents('.js_dialog').attr('aria-hidden','true');
-            $(this).parents('.js_dialog').removeAttr('tabindex');
+            //$(this).parents('.js_dialog').fadeOut(200);
+            $textToast.fadeIn(100);
+            setTimeout(function () {
+                $textToast.fadeOut(100);
+            }, 2000);
         });
 
         $('#showIOSDialog1').on('click', function(){
             $iosDialog1.fadeIn(200);
-            $iosDialog1.attr('aria-hidden','false');
             $iosDialog1.attr('tabindex','0');
             $iosDialog1.trigger('focus');
         });
         $('#showIOSDialog2').on('click', function(){
             $iosDialog2.fadeIn(200);
-            $iosDialog2.attr('aria-hidden','false');
             $iosDialog2.attr('tabindex','0');
             $iosDialog2.trigger('focus');
         });
-        // $('#showAndroidDialog1').on('click', function(){
-        //     $androidDialog1.fadeIn(200);
-        //     $androidDialog1.attr('aria-hidden','false');
-        //     $androidDialog1.attr('tabindex','0');
-        //     $androidDialog1.trigger('focus');
-        // });
-        // $('#showAndroidDialog2').on('click', function(){
-        //     $androidDialog2.fadeIn(200);
-        //     $androidDialog2.attr('aria-hidden','false');
-        //     $androidDialog2.attr('tabindex','0');
-        //     $androidDialog2.trigger('focus');
-        // });
     });</script>
   <!-- <script src="https://res.wx.qq.com/t/wx_fed/cdn_libs/res/weui/1.2.8/weui.min.js"></script> -->
 </body>
