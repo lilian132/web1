@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>省呗</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+		<meta name="keywords" content="省呗，省呗app，省呗下载，消费优惠，消费优惠平台，消费优惠服务">
+		<meta name="description" content="省呗APP于2015年推出，是一款可为终端用户提供购物消费、娱乐、信用管理、知识推广等涵盖多场景、多领域的数字化消费优惠服务平台。">
+		<link rel="stylesheet" type="text/css" href="./css/animate.css"/>
+		<style>
+			body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form{margin:0}
+			body,button,input,select,textarea{font:12px/1.5 tahoma,'\5b8b\4f53',sans-serif}
+			h1,h2,h3,h4,h5,h6{font-size:100%}
+			em,b{font-style:normal}
+			a{text-decoration:none}
+			a:hover{text-decoration:underline}
+			img{border:0}
+			button,input,select,textarea{font-size:100%;outline:none}
+			td,th,ul,ol{padding:0}
+			ul{list-style-type: none}
+
+			body{
+				background: #f5f5f5;
+				font-size: 0.12rem;
+				overflow-y: hidden;
+			}
+			/* 头部区域 */
+			header{
+				background: green;
+				padding: 0.3rem 0.12rem;
+				color: #fff;
+			}
+			.h-content{
+				display: flex;
+				flex-wrap:wrap;
+			}
+			.h-content-0{
+				width: 100%;
+				transition: all 0.75s ease;
+			}
+			.h-txt-0{
+				font-size: 0.14rem;
+				margin-top: 0.18rem;
+			}
+			.h-txt-1{
+				font-size: 0.16rem;
+				margin: 0.05rem 0;
+			}
+			.ul-describe{
+				margin-top: 0.15rem;
+			}
+			.ul-describe li{
+				width: 50%;
+				float: left;
+				margin-bottom: 0.12rem;
+			}
+			@media (min-width: 768px) {
+				.h-content-0{
+					width: 50%;
+				}
+			}
+			/* 内容区域 */
+			.main{
+				padding: 0.1rem;
+				background: #fff;
+				transition: all 0.75s ease;
+			}
+			@media (min-width: 768px) {
+				.main{
+					margin: -0.3rem 0.2rem 0;
+				}
+			}
+			.main-title{
+				margin: 0.1rem 0;
+			}
+			.ul-process{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.li-process{
+				min-width: 100%;
+			}
+			@media (min-width: 768px) {
+				.li-process{
+					min-width: 50%;
+				}
+			}
+			@media (min-width: 1080px) {
+				.li-process{
+					min-width: 25%;
+				}
+			}
+			/* footer */
+			footer{
+				margin-top: 20rem;
+			}
+		</style>
+		<script type="text/javascript">
+			(function (win, doc) {
+					var html = document.documentElement
+					function setFont () {
+							var cliWidth = html.clientWidth;
+							if(cliWidth > 1080) {
+								cliWidth = 1080
+							}
+							html.style.fontSize = 100 * (cliWidth / 375) + 'px';
+					}
+					win.addEventListener('resize', setFont, false)
+					setFont()
+			})(window, document)
+		</script>
+	</head>
+	<body>
+		
+		<header>
+			<h1 class="title">趣小富 | 省呗品牌全新升级，急用钱就用趣小富</h1>
+			<div class="h-content">
+				<div class="h-content-0">
+					<h2 class="h-txt-0">最高可解额度</h2>
+					<p class="h-txt-1">200,000.00元</p>
+					<ul class="ul-describe">
+						<li class="animate__animated animate__fadeInUp">
+							<p>额度高 免费领</p>
+						</li>
+						<li class="animate__animated animate__fadeInUp animate__delay-1s">
+							<p>额度高 免费领</p>
+						</li>
+						<li class="animate__animated animate__fadeInUp animate__delay-2s">
+							<p>额度高 免费领</p>
+						</li>
+						<li class="animate__animated animate__fadeInUp animate__delay-3s">
+							<p>额度高 免费领</p>
+						</li>
+					</ul>
+				</div>
+				<div class="h-content-1">二维码</div>
+			</div>
+		</header>
+		<main class="main">
+			<section>
+				<h2 class="main-title">快速借款流程</h2>
+				<ul class="ul-process">
+					<li class="li-process">111111</li>
+					<li class="li-process">22222</li>
+					<li class="li-process">333333</li>
+					<li class="li-process">444444</li>
+				</div>
+			</section>
+			
+		</main>
+		<footer>			
+			
+		</footer>
+	</body>
+	
+	<script type="text/javascript">
+		// setInterval(function(){window.navigation.reload()},1000)
+
+		// var fromId = getQueryVariable('from');
+		// var src = 'https://cdn.sunwaystech.com/images/qk/wxcode';
+		// src = fromId ? `${src}${fromId}.png`:`${src}.png`;
+		// document.getElementById('code').src = src;
+	
+        function getQueryVariable(variable){
+					var query = window.location.search.substring(1);
+					var vars = query.split("&");
+					for (var i=0;i<vars.length;i++) {
+									var pair = vars[i].split("=");
+									if(pair[0] == variable){return pair[1];}
+					}
+					return(false);
+        }
+	</script>
+</html>
