@@ -22,8 +22,8 @@
   <style>
     body{
       font-size: 0.12rem;
-      overflow-y: hidden;
     }
+    .weui-toast_text i{display: none!important;}
   </style>
 </head>
 <body>
@@ -98,6 +98,10 @@
             $iosDialog2.trigger('focus');
         });
     });</script>
-  <!-- <script src="https://res.wx.qq.com/t/wx_fed/cdn_libs/res/weui/1.2.8/weui.min.js"></script> -->
+  <script src="https://res.wx.qq.com/t/wx_fed/cdn_libs/res/weui/1.2.8/weui.min.js"></script>
+  <script>
+    console.log(weui)
+    weui.toast('1111',{className:'weui-toast_text',duration:1000000})
+  </script>
 </body>
 </html>
